@@ -1,0 +1,213 @@
+version: "3"
+services:
+  etcd:
+    image: "bitnami/etcd:latest"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+      #- ETCD_DEBUG=true
+  nats:
+    image: nats
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    ports:
+      - 4222:4222
+      - 6222:6222
+      - 8222:8222
+    #command: --debug --trace
+  db-user:
+    build:
+      context: .
+      dockerfile: database/dbuser/service/Dockerfile
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6383"
+    volumes:
+      - ./database/dbuser/data/:/opt/bitnami/redis/data/
+  db-id:
+    build:
+      context: .
+      dockerfile: database/dbid/service/Dockerfile
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6382"
+    volumes:
+      - ./database/dbid/data/:/opt/bitnami/redis/data/
+  db-game:
+    build:
+      context: .
+      dockerfile: database/dbgame/service/Dockerfile
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6380"
+    volumes:
+    - ./database/dbgame/data/:/opt/bitnami/redis/data/
+  db-quizcontent:
+    build:
+      context: .
+      dockerfile: database/dbquizcontent/service/Dockerfile
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6381"
+    volumes:
+      - ./database/dbquizcontent/data/:/opt/bitnami/redis/data/
+  user-service:
+    build:
+      context: .
+      dockerfile: user/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --store_address=db-user:6383
+    links:
+      - etcd
+  quizcontent-service:
+    build:
+      context: .
+      dockerfile: quizcontent/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --store_address=db-quizcontent:6381
+    links:
+      - etcd
+  game-service:
+    build:
+      context: .
+      dockerfile: game/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --store_address=db-game:6380
+    links:
+      - etcd
+  id-service:
+    build:
+      context: .
+      dockerfile: id/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --store_address=db-id:6382
+    links:
+      - etcd
+  game-session-service:
+    build:
+      context: .
+      dockerfile: gamesession/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --broker_address=nats:4222
+    links:
+      - etcd
+    ports:
+      - "8101:8101"
+      - "8102:8102"
+      - "8103:8103"
+      - "8104:8104"
+      - "8105:8105"
+      - "8106:8106"
+      - "8107:8107"
+      - "8108:8108"
+      - "8109:8109"
+      - "8110:8110"
+  evaluation-service:
+    build:
+      context: .
+      dockerfile: evaluation/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379 --broker_address=nats:4222
+    links:
+      - etcd
+      - nats
+    depends_on:
+      - nats
+      - etcd
+  chat-service:
+    build:
+      context: .
+      dockerfile: chat/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - MICRO_BROKER_ADDRESS=nats:4222
+      - MICRO_REGISTRY_ADDRESS=etcd:2379
+    links:
+      - etcd
+      - nats
+    depends_on:
+      - nats
+      - etcd
+    ports:
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+      - "8004:8004"
+      - "8005:8005"
+      - "8006:8006"
+      - "8007:8007"
+      - "8008:8008"
+      - "8009:8009"
+      - "8010:8010"
+  clientinitialize:
+    build:
+      context: .
+      dockerfile: client/clientinitialize/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --broker=nats --registry_address=etcd:2379 --broker_address=nats:4222
+    links:
+      - etcd
+      - nats
+    depends_on:
+      - etcd
+      - nats
+  preload-content-service:
+    build:
+      context: .
+      dockerfile: client/contentpreloader/service/Dockerfile
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    command: --registry_address=etcd:2379
+    links:
+      - etcd
+    depends_on:
+      - etcd
+      - quizcontent-service
+  apigateway-rpc:
+    image: "micro/micro:v2.9.2"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - MICRO_API_HANDLER=rpc
+      - MICRO_API_REGISTRY=etcd
+      - MICRO_API_NAMESPACE="sq"
+      - MICRO_API_ENABLE_RPC=true
+      - MICRO_API_ADDRESS="8085"
+    command: --auth_namespace=sq --registry=etcd --registry_address=etcd:2379 api --handler=rpc --address=:8085 --namespace=sq
+    links:
+      - etcd
+    ports:
+      - "8085:8085"
+    depends_on:
+      - etcd
+  apigateway-event:
+    image: "micro/micro:v2.9.2"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - MICRO_API_HANDLER=event
+      - MICRO_API_REGISTRY=etcd
+      - MICRO_API_NAMESPACE=nq
+      - MICRO_API_ENABLE_RPC=true
+      - MICRO_API_ADDRESS="8086"
+    command: --auth_namespace=nq --broker_address=nats:4222 --broker=nats --registry=etcd --registry_address=etcd:2379 api --handler=event --address=:8086 --namespace=nq
+    links:
+      - etcd
+    ports:
+      - "8086:8086"
+    depends_on:
+      - etcd
+      - nats
+
+
+
+

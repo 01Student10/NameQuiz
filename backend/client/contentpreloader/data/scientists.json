@@ -1,0 +1,72 @@
+{
+  "listId": "25",
+  "name": "scientists",
+  "entries": {
+    "26": {
+      "id": "26",
+      "name": "Isaac Newton",
+      "path": "800px-Sir_Isaac_Newton_by_Sir_Godfrey_Kneller,_Bt.jpg",
+      "licence": " London 1702, Bestand der National Portrait Gallery - Licence: Gemeinfrei "
+    },
+    "27": {
+      "id": "27",
+      "name": "Marie Curie",
+      "path": "Marie_Curie_(Nobel-Chem).jpg",
+      "licence": " auf dem offiziellen Nobelpreisfoto von 1911 - Licence: Gemeinfrei"
+    },
+    "28": {
+      "id": "28",
+      "name": "Albert Einstein",
+      "path": "800px-Einstein_1921_portrait2.jpg",
+      "licence": " during a lecture in Vienna in 1921 - Licence: Gemeinfrei - Creator: Ferdinand Schmutzer"
+    },
+    "29": {
+      "id": "29",
+      "name": "Leonhard Euler",
+      "path": "Leonhard_Euler_2.jpg",
+      "licence": " Licence: Gemeinfrei - Creator: Jakob Emanuel Handmann"
+    },
+    "30": {
+      "id": "30",
+      "name": "Linus Torvalds",
+      "path": "800px-LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg",
+      "licence": "speaking at the LinuxCon Europe 2014 in Düsseldorf  - Licence: CC BY-SA 4.0 - Creator:  Krd "
+    },
+    "31": {
+      "id": "31",
+      "name": "Alan Turing",
+      "path": "Alan_Turing_az_1930-as_években.jpg",
+      "licence": " az 1930-as években - Licence: Gemeinfrei -  Creator: Unbekannt "
+    },
+    "32": {
+      "id": "32",
+      "name": "Charles Darwin",
+      "path": "Charles_Darwin_aged_51.jpg",
+      "licence": " portrait - Licence: Gemeinfrei - Creator: Messrs, Maull and Fox "
+    },
+    "33": {
+      "id": "33",
+      "name": "Carl Friedrich Gauss",
+      "path": "800px-Carl_Friedrich_Gauss.jpg",
+      "licence": "Ausschnitt aus einem Gemälde von Gottlieb Biermann, 1887 - Licence: Gemeinfrei - Creator: Christian Albrecht Jensen"
+    },
+    "34": {
+      "id": "34",
+      "name": "Bil Nye",
+      "path": "Bill_Nye_by_Gage_Skidmore.jpg",
+      "licence": "speaking at Politicon in Pasadena, California. - Licence: CC BY-SA 3.0 - Creator: Gage Skidmore"
+    },
+    "35": {
+      "id": "35",
+      "name": "Steve Jobs",
+      "path": "800px-Steve_Jobs_Headshot_2010-CROP2.jpg",
+      "licence": "at the 2010 Worldwide Developers Conference - Licence: CC BY-SA 3.0 - Creator: MetalGearLiquid"
+    },
+    "36": {
+      "id": "36",
+      "name": "Ada Lovelace",
+      "path": "Ada_Lovelace.jpg",
+      "licence": "- Licence: Gemeinfrei - Creator: Margaret Sarah Carpenter"
+    }
+  }
+}

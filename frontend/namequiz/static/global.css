@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333;
+}
+
+h1 {
+	font-size: 2.8em;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0 0 0.5em 0;
+}
+
+code {
+	font-family: menlo, inconsolata, monospace;
+	font-size: calc(1em - 2px);
+	color: #555;
+	background-color: #f0f0f0;
+	padding: 0.2em 0.4em;
+	border-radius: 2px;
+}
+
+@media (min-width: 400px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+/** custom css **/
+
+.main {
+	width: 830px !important;
+	margin: 15px auto !important;
+}
+
+.main_log {
+	width: 400px !important;
+	margin: 150px auto !important;
+	text-align: center;
+}
+
+.main_reg {
+	width: 400px !important;
+	margin: 30px auto !important;
+	text-align: center;
+}
+
+.main_game {
+	width: 1200px !important;
+	height: auto;
+	margin: 15px auto;
+}
+
+.main_create_game {
+	width: 600px !important;
+	height: auto;
+	margin: 15px auto;
+	text-align: center;
+}
+
+.bottom {
+	height: 600px;
+	padding: 10px 10px;
+}
+
+.top {
+	height: 80px;
+	padding: 10px 10px;
+}
+
+.top_left {
+	height: 60px;
+	width: 400px;
+}
+
+.top_right {
+	height: 60px;
+	width: 790px;
+}
+
+.top_right_top {
+	width: 790px;
+	height: 30px;
+}
+
+.top_right_top_left {
+	width: 300px;
+}
+
+.top_right_top_right {
+	width: 490px;
+}
+
+.top_right_bot {
+	width: 790px;
+	height: 30px;
+}
+
+.game_img {
+	height: 380px;
+	width: 370px;
+	border-radius: 5%;
+}
+
+.game_img_desc {
+	margin-top: 10px;
+}
+
+.image-container {
+	padding: 10px 10px;
+}
+
+.progress_bar {
+	width: 100%;
+}
+
+.bottom_left {
+	height: 570px;
+	width: 390px;
+	margin: 5px 5px;
+}
+
+.bottom_middle {
+	height: 570px;
+	width: 390px;
+	margin: 5px 5px;
+}
+
+.chatwindow {
+	height: 540px;
+	padding-right: 40px;
+	padding-top: 15px;
+}
+
+#messages {
+	list-style-type: none;
+}
+
+.chatwindow_input {
+	height: 30px;
+}
+
+
+.bottom_right {
+	height: 570px;
+	width: 390px;
+	margin: 5px 5px;
+}
+
+#register_link:hover {
+	margin-left: 5px;
+	color: black;
+	text-decoration-color: black;
+}
+
+#register_link {
+	margin-left: 5px;
+	color: black;
+	text-decoration-color: black;
+}
+
+.text-muted {
+	font-size: 17px !important;
+}
+
+#nav_username {
+	font-weight: bold;
+	margin-right: 15px;
+	font-size: 20px;
+}
+
+.nav_greeting {
+	color: lightgrey;
+}
+
+.games {
+	margin: auto;
+	width: 250px;
+	margin-bottom: 10px;
+}
+
+#right_guess {
+	background-color: rgba(50, 255, 126,0.5);
+}
+
+#wrong_guess {
+	background-color: rgba(255, 77, 77,0.5);
+}
+
+#gameselect {
+	background-image:
+			linear-gradient(45deg, transparent 50%, black 60%),
+			linear-gradient(135deg, black 40%, transparent 50%) !important;
+	background-position:
+			calc(100% - 30px) 14px,
+			calc(100% - 20px) 14px,
+			100% 0;
+	background-size:
+			10px 10px,
+			10px 10px;
+	background-repeat: no-repeat;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.badge_h {
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+.phase {
+	width: 245px;
+}
+
+.title {
+	width: 245px;
+}
+
+.score_table {
+	width: 390px !important;
+}
+
+.game_header {
+	background-color: rgba(220, 221, 225,0.7);
+}

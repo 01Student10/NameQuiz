@@ -1,0 +1,242 @@
+*2
+$6
+SELECT
+$1
+0
+*3
+$3
+set
+$1
+1
+$2513
+{
+  "listId": "1",
+  "name": "actors",
+  "entries": {
+    "2": {
+      "id": "2",
+      "name": "Jack Nicholson",
+      "path": "Jack_Nicholson_2001_wikipedia.jpg",
+      "licence": "From Kennedy center ( an honoree that year ) December 2, 2001 © copyright John Mathew Smith 2001 -Licence: CC BY-SA 2.0 "
+    },
+    "3": {
+      "id": "3",
+      "name": "Uma Thurman",
+      "path": "Uma_Thurman_-_Cannes_2000.jpg",
+      "licence": "Where: in Cannes Red Carpet in 2000 - Licence: CC BY-SA 2.5 - Creator: Rita Molnár"
+    },
+    "4": {
+      "id": "4",
+      "name": "Will Ferrell",
+      "path": "Will_Ferrell_Deauville_2014.jpg",
+      "licence": "at the Deauville Film Festival - Licence: CC BY-SA 3.0 - Creator: Georges Biard"
+    },
+    "5": {
+      "id": "5",
+      "name": "Mark Ruffalo",
+      "path": "Mark_Ruffalo_in_2017_by_Gage_Skidmore.jpg",
+      "licence": "auf der San Diego Comic-Con International (2017)- Licence: CC BY-SA 2.0 - Creator: Gage Skidmore"
+    },
+    "6": {
+      "id": "6",
+      "name": "Emilia Clarke",
+      "path": "Emilia_Clarke_by_Gage_Skidmore_2_(cropped).jpg",
+      "licence": "auf der San Diego Comic-Con International 2013 - Licence: CC BY-SA 3.0 - Creator: Gage Skidmore "
+    },
+    "7": {
+      "id": "7",
+      "name": "Emma Watson",
+      "path": "Emma_Watson_2013.jpg",
+      "licence": " at the Cannes Film Festival 2013. - Licence: CC BY-SA 3.0 -  Creator: Georges Biard "
+    },
+    "8": {
+      "id": "8",
+      "name": "Edward Norton",
+      "path": "Edward_Norton_2012.jpg",
+      "licence": " in Africa, March 2012. - Licence: CC BY 2.0 - Creator: Steve Jurvetson  "
+    },
+    "9": {
+      "id": "9",
+      "name": "Russel Crowe",
+      "path": "Russell_Crowe.jpg",
+      "licence": "Licence: CC BY-SA 2.0 - Creator: Eva Rinaldi"
+    },
+    "10": {
+      "id": "10",
+      "name": "Daisy Ridley",
+      "path": "Daisy_Ridley_by_Gage_Skidmore.jpg",
+      "licence": "at the 2015 San Diego Comic Con International in San Diego, California. - Licence: CC BY-SA 3.0 - Creator: Gage Skidmore"
+    },
+    "11": {
+      "id": "11",
+      "name": "Will Smith",
+      "path": "Will_Smith_by_Gage_Skidmore_2.jpg",
+      "licence": "bei der Comic-Con (2017) - Licence: CC BY-SA 3.0 - Creator: Gage Skidmore"
+    },
+    "12": {
+      "id": "12",
+      "name": "Kevin James",
+      "path": "Kevin_James_2011_(Cropped).jpg",
+      "licence": "at a ceremony to receive a star on the Hollywood Walk of Fame. - Licence: CC BY-SA 3.0 - Creator: Angela George"
+    }
+  }
+}
+
+*3
+$3
+set
+$2
+13
+$2682
+{
+  "listId": "13",
+  "name": "musicians",
+  "entries": {
+    "14": {
+      "id": "14",
+      "name": "Freddie Mercury",
+      "path": "FreddieMercuryNov1977.jpg",
+      "licence": "performing at New Haven Coliseum in New Haven, CT -Licence: CC BY-SA 3.0 - Creator : Carl Lender "
+    },
+    "15": {
+      "id": "15",
+      "name": "Lady Gaga",
+      "path": "Lady_Gaga_SAG_2019.jpg",
+      "licence": "Where:  at 2019 SAG Awards Red Carpet - Licence: CC BY 3.0 - Creator: Nicole Alexander"
+    },
+    "16": {
+      "id": "16",
+      "name": "Drake",
+      "path": "Drake_at_The_Carter_Effect_2017_(36818935200)_(cropped).jpg",
+      "licence": " at the premiere of The Carter Effect, 2017 Toronto Film Festival - Licence: CC BY-SA 2.0 - Creator: GabboT - Carter Effect 17"
+    },
+    "17": {
+      "id": "17",
+      "name": "Axl Rose",
+      "path": "GNRChorzow090718-76_(30169034758).jpg",
+      "licence": "GNRChorzow090718-76 - Licence: CC BY 2.0 - Creator: Raph_PH - GNRChorzow090718-76"
+    },
+    "18": {
+      "id": "18",
+      "name": "Billie Eilish",
+      "path": "Billie_Eilish_2019_by_Glenn_Francis_(cropped)_2.jpg",
+      "licence": " at the 2019 iHeartRadio Music Awards in Los Angeles California on March 14, 2019  - Licence: CC BY-SA 4.0 - Creator:  Glenn Francis "
+    },
+    "19": {
+      "id": "19",
+      "name": "Kool Savas",
+      "path": "800px-Kool_Savas_2010.jpg",
+      "licence": " im Jahr 2010 - Licence: CC BY-SA 2.0 -  Creator: Katja Kuhl - David Laube "
+    },
+    "20": {
+      "id": "20",
+      "name": "Luciano Pavarotti",
+      "path": "800px-Luciano_Pavarotti_2004.jpg",
+      "licence": " From Wash D.C. copyright John Mathew Smith - Licence: CC BY-SA 2.0 - Creator: Kingkongphoto & www.celebrity-photos.com  "
+    },
+    "21": {
+      "id": "21",
+      "name": "Ed Sheeran",
+      "path": "800px-Ed_Sheeran-6886_(cropped).jpg",
+      "licence": "  auf der Berlinale 2018 - Licence: CC BY-SA 3.0 - Creator: Harald Krichel"
+    },
+    "22": {
+      "id": "22",
+      "name": "Whitney Houston",
+      "path": "800px-Flickr_Whitney_Houston_performing_on_GMA_2009_4.jpg",
+      "licence": "performing on Good Morning America (Central Park, New York City) on September 1, 2009. - Licence: CC BY-SA 2.0 - Creator: Asterio Tecson"
+    },
+    "23": {
+      "id": "23",
+      "name": "Pink",
+      "path": "Cwo_20190726225621b_Pink.jpg",
+      "licence": "Olympiastadion, München - Licence: CC BY-SA 4.0 - Creator: Andemaya"
+    },
+    "24": {
+      "id": "24",
+      "name": "Macklemore",
+      "path": "Macklemore_Ryan_Lewis_Live_2016_(3_von_20).jpg",
+      "licence": "Live @ 2016 - Licence: CC BY-SA 3.0 - Creator: pitpony.photography"
+    }
+  }
+}
+
+*3
+$3
+set
+$2
+25
+$2457
+{
+  "listId": "25",
+  "name": "scientists",
+  "entries": {
+    "26": {
+      "id": "26",
+      "name": "Isaac Newton",
+      "path": "800px-Sir_Isaac_Newton_by_Sir_Godfrey_Kneller,_Bt.jpg",
+      "licence": " London 1702, Bestand der National Portrait Gallery - Licence: Gemeinfrei "
+    },
+    "27": {
+      "id": "27",
+      "name": "Marie Curie",
+      "path": "Marie_Curie_(Nobel-Chem).jpg",
+      "licence": " auf dem offiziellen Nobelpreisfoto von 1911 - Licence: Gemeinfrei"
+    },
+    "28": {
+      "id": "28",
+      "name": "Albert Einstein",
+      "path": "800px-Einstein_1921_portrait2.jpg",
+      "licence": " during a lecture in Vienna in 1921 - Licence: Gemeinfrei - Creator: Ferdinand Schmutzer"
+    },
+    "29": {
+      "id": "29",
+      "name": "Leonhard Euler",
+      "path": "Leonhard_Euler_2.jpg",
+      "licence": " Licence: Gemeinfrei - Creator: Jakob Emanuel Handmann"
+    },
+    "30": {
+      "id": "30",
+      "name": "Linus Torvalds",
+      "path": "800px-LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg",
+      "licence": "speaking at the LinuxCon Europe 2014 in Düsseldorf  - Licence: CC BY-SA 4.0 - Creator:  Krd "
+    },
+    "31": {
+      "id": "31",
+      "name": "Alan Turing",
+      "path": "Alan_Turing_az_1930-as_években.jpg",
+      "licence": " az 1930-as években - Licence: Gemeinfrei -  Creator: Unbekannt "
+    },
+    "32": {
+      "id": "32",
+      "name": "Charles Darwin",
+      "path": "Charles_Darwin_aged_51.jpg",
+      "licence": " portrait - Licence: Gemeinfrei - Creator: Messrs, Maull and Fox "
+    },
+    "33": {
+      "id": "33",
+      "name": "Carl Friedrich Gauss",
+      "path": "800px-Carl_Friedrich_Gauss.jpg",
+      "licence": "Ausschnitt aus einem Gemälde von Gottlieb Biermann, 1887 - Licence: Gemeinfrei - Creator: Christian Albrecht Jensen"
+    },
+    "34": {
+      "id": "34",
+      "name": "Bil Nye",
+      "path": "Bill_Nye_by_Gage_Skidmore.jpg",
+      "licence": "speaking at Politicon in Pasadena, California. - Licence: CC BY-SA 3.0 - Creator: Gage Skidmore"
+    },
+    "35": {
+      "id": "35",
+      "name": "Steve Jobs",
+      "path": "800px-Steve_Jobs_Headshot_2010-CROP2.jpg",
+      "licence": "at the 2010 Worldwide Developers Conference - Licence: CC BY-SA 3.0 - Creator: MetalGearLiquid"
+    },
+    "36": {
+      "id": "36",
+      "name": "Ada Lovelace",
+      "path": "Ada_Lovelace.jpg",
+      "licence": "- Licence: Gemeinfrei - Creator: Margaret Sarah Carpenter"
+    }
+  }
+}
+

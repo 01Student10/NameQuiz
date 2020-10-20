@@ -1,0 +1,305 @@
+syntax = "proto3";
+package api;
+option go_package = ".;api";
+
+//----------
+// since it is hardcoded in proto that default
+//value of false and 0 wont be forwarded,
+//we do use the following notation in proto:
+//int32(1) = true
+//int32(2) = false
+//----------
+
+//Id service
+
+service IdService {
+  rpc GetId(GetIdRequest) returns (GetIdResponse) {}
+}
+
+message GetIdRequest {}
+
+message GetIdResponse {
+  int32 id = 1;
+  string response =2;
+}
+
+//User service
+service UserService{
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+  rpc GetAllUsers(GetAllUsersRequest) returns (GetAllUsersResponse) {}
+  rpc HasUser(HasUserRequest) returns (HasUserResponse) {}
+  rpc Login(LoginRequest) returns (LoginResponse) {}
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+  string mail = 4;
+}
+
+message CreateUserRequest {
+   string username =1;
+   string mail = 2;
+   string password = 3;
+}
+
+message CreateUserResponse {
+  User user = 1;
+  int32 hasCreatedUser = 2;
+  string response = 3;
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  User user  = 1;
+  string response = 2;
+
+}
+message GetAllUsersRequest {
+}
+
+message GetAllUsersResponse {
+  repeated User users = 1;
+  string response = 2;
+}
+
+message HasUserRequest {
+  int32 id = 1;
+}
+message HasUserResponse {
+  int32 userAvailable = 1;
+  string response = 2;
+}
+
+message LoginRequest {
+  string userName = 1;
+  string password = 2;
+}
+message LoginResponse {
+  int32 hasLoggedIn = 1;
+  User user = 2;
+}
+
+
+
+//Game service
+
+service GameService {
+  rpc CreateGame(CreateGameRequest) returns (CreateGameResponse) {}
+  rpc DeleteGame(DeleteGameRequest) returns (DeleteGameResponse) {}
+  rpc GetGame(GetGameRequest) returns (GetGameResponse) {}
+  rpc GetAllGames(GetAllGamesRequest) returns (GetAllGamesResponse) {}
+}
+
+message Game {
+  int32 id = 1;
+  string title = 2;
+  int32 amountOfRounds = 3;
+  string playlistId = 4;
+  int32 owner = 6;
+}
+
+message CreateGameRequest {
+  string title = 2;
+  int32 amountOfSongs = 3;
+  string playlistId = 4;
+  int32 owner = 5;
+}
+message  CreateGameResponse {
+  int32 id = 1;
+  string response = 2;
+}
+
+message DeleteGameRequest {
+  int32 id = 1;
+}
+
+message DeleteGameResponse {
+  string response = 1;
+}
+
+message GetGameRequest {
+  int32 id = 1;
+}
+message GetGameResponse {
+  Game game = 1;
+  string response = 2;
+}
+
+message GetAllGamesRequest {
+}
+
+message GetAllGamesResponse {
+  repeated Game games = 1;
+  string response  = 2;
+}
+
+message Empty{}
+
+// Chat Service
+
+service ChatService {
+  rpc BroadcastMessage(BroadcastMessageRequest) returns (BroadcastMessageResponse) {}
+  rpc StartWebsocket(StartWebsocketRequest) returns (StartWebsocketResponse) {}
+}
+
+message BroadcastMessageRequest {
+  UserMessage message = 1;
+}
+message BroadcastMessageResponse {
+  int32 successful = 1;
+  string error = 2;
+}
+
+message StartWebsocketRequest {
+  string socketUrlPattern = 1;
+  int32 sessionId =2;
+  string socketPort = 3;
+}
+
+message StartWebsocketResponse {
+  int32 successful = 1;
+  string error = 2;
+}
+
+// QuizContent Service
+
+
+service QuizContentService {
+  rpc GetContentEntry(GetContentEntryRequest) returns (GetContentEntryResponse) {}
+  rpc GetContentList(GetContentListRequest) returns (GetContentListResponse) {}
+  rpc GetAllContentLists(GetAllContentListsRequest) returns (GetAllContentListsResponse) {}
+  rpc HasMatch(HasMatchRequest) returns (HasMatchResponse) {}
+  rpc CreateNewDataSet(CreateNewDataSetRequest) returns (CreateNewDataSetResponse) {}
+}
+
+message GetContentEntryRequest {
+  string listId =1;
+  string entryId =2;
+}
+message GetContentEntryResponse {
+  ContentEntry entry = 1;
+  string response = 2;
+}
+
+message GetContentListRequest {
+  string listId  = 1;
+}
+message GetContentListResponse {
+  string listId = 1;
+  repeated string entryIds = 2;
+  string response = 3;
+}
+
+message GetAllContentListsRequest {}
+
+message GetAllContentListsResponse {
+  map<string, string> nameToId = 1;
+  string response = 2;
+}
+
+message HasMatchRequest {
+  string listId = 1;
+  string entryId = 2;
+  string guess = 3;
+}
+message HasMatchResponse {
+  int32 isRight = 1;
+  string response = 2;
+}
+
+message CreateNewDataSetRequest {
+   string pathToJson = 1;
+}
+message CreateNewDataSetResponse {
+  string response = 1;
+}
+
+message ContentEntry {
+  string id = 1;
+  string name = 2;
+  string path = 3;
+  string licence = 4;
+}
+
+// Pub Sub Event
+
+message UserMessage {
+  int32 userId = 1;
+  string userName = 2;
+  string guess = 3;
+  int32 sessionId = 4;
+  string listId = 5;
+  string entryId = 6;
+  int32 wasRight = 7;
+
+}
+
+// GameSession
+
+service GameSessionService {
+  rpc CreateSession(CreateSessionRequest) returns (CreateSessionResponse) {}
+  rpc StartSession(StartSessionRequest) returns (StartSessionResponse) {}
+  rpc JoinSession(JoinSessionRequest) returns (JoinSessionResponse) {}
+  rpc LeaveSession(LeaveSessionRequest) returns (LeaveSessionResponse) {}
+  rpc IsSessionCreated(IsSessionCreatedRequest) returns (IsSessionCreatedResponse) {}
+}
+
+
+
+message CreateSessionRequest {
+  int32 gameId = 1;
+
+}
+message CreateSessionResponse {
+  string chatSocketAddress = 1;
+  string sessionSocketAddress = 2;
+  int32 sessionId = 3;
+  string response = 4;
+
+
+}
+message StartSessionRequest {
+  int32 sessionId =1;
+}
+
+
+message StartSessionResponse {
+  int32 hasWorked  =1;
+  string response =2;
+}
+message JoinSessionRequest {
+  int32 sessionId = 1;
+  int32 userId =2;
+}
+message JoinSessionResponse {
+  int32 hasWorked =1;
+  string response = 2;
+}
+message LeaveSessionRequest {
+  int32 sessionId = 1;
+  int32 userId = 2;
+}
+message LeaveSessionResponse {
+  int32 hasWorked = 1;
+  string response = 2;
+}
+
+message IsSessionCreatedRequest {
+  int32 gameId =1;
+}
+
+message IsSessionCreatedResponse {
+  int32 isRunning = 1;
+  int32 sessionId =2;
+  string chatSocketAddress = 3;
+  string sessionSocketAddress = 4;
+}
+
+
+

@@ -1,0 +1,72 @@
+{
+  "listId": "13",
+  "name": "musicians",
+  "entries": {
+    "14": {
+      "id": "14",
+      "name": "Freddie Mercury",
+      "path": "FreddieMercuryNov1977.jpg",
+      "licence": "performing at New Haven Coliseum in New Haven, CT -Licence: CC BY-SA 3.0 - Creator : Carl Lender "
+    },
+    "15": {
+      "id": "15",
+      "name": "Lady Gaga",
+      "path": "Lady_Gaga_SAG_2019.jpg",
+      "licence": "Where:  at 2019 SAG Awards Red Carpet - Licence: CC BY 3.0 - Creator: Nicole Alexander"
+    },
+    "16": {
+      "id": "16",
+      "name": "Drake",
+      "path": "Drake_at_The_Carter_Effect_2017_(36818935200)_(cropped).jpg",
+      "licence": " at the premiere of The Carter Effect, 2017 Toronto Film Festival - Licence: CC BY-SA 2.0 - Creator: GabboT - Carter Effect 17"
+    },
+    "17": {
+      "id": "17",
+      "name": "Axl Rose",
+      "path": "GNRChorzow090718-76_(30169034758).jpg",
+      "licence": "GNRChorzow090718-76 - Licence: CC BY 2.0 - Creator: Raph_PH - GNRChorzow090718-76"
+    },
+    "18": {
+      "id": "18",
+      "name": "Billie Eilish",
+      "path": "Billie_Eilish_2019_by_Glenn_Francis_(cropped)_2.jpg",
+      "licence": " at the 2019 iHeartRadio Music Awards in Los Angeles California on March 14, 2019  - Licence: CC BY-SA 4.0 - Creator:  Glenn Francis "
+    },
+    "19": {
+      "id": "19",
+      "name": "Kool Savas",
+      "path": "800px-Kool_Savas_2010.jpg",
+      "licence": " im Jahr 2010 - Licence: CC BY-SA 2.0 -  Creator: Katja Kuhl - David Laube "
+    },
+    "20": {
+      "id": "20",
+      "name": "Luciano Pavarotti",
+      "path": "800px-Luciano_Pavarotti_2004.jpg",
+      "licence": " From Wash D.C. copyright John Mathew Smith - Licence: CC BY-SA 2.0 - Creator: Kingkongphoto & www.celebrity-photos.com  "
+    },
+    "21": {
+      "id": "21",
+      "name": "Ed Sheeran",
+      "path": "800px-Ed_Sheeran-6886_(cropped).jpg",
+      "licence": "  auf der Berlinale 2018 - Licence: CC BY-SA 3.0 - Creator: Harald Krichel"
+    },
+    "22": {
+      "id": "22",
+      "name": "Whitney Houston",
+      "path": "800px-Flickr_Whitney_Houston_performing_on_GMA_2009_4.jpg",
+      "licence": "performing on Good Morning America (Central Park, New York City) on September 1, 2009. - Licence: CC BY-SA 2.0 - Creator: Asterio Tecson"
+    },
+    "23": {
+      "id": "23",
+      "name": "Pink",
+      "path": "Cwo_20190726225621b_Pink.jpg",
+      "licence": "Olympiastadion, München - Licence: CC BY-SA 4.0 - Creator: Andemaya"
+    },
+    "24": {
+      "id": "24",
+      "name": "Macklemore",
+      "path": "Macklemore_Ryan_Lewis_Live_2016_(3_von_20).jpg",
+      "licence": "Live @ 2016 - Licence: CC BY-SA 3.0 - Creator: pitpony.photography"
+    }
+  }
+}
