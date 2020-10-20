@@ -26,7 +26,7 @@ Wobei <service> der Name des Services verwendet wird wie er im  [docker-compose.
 
 vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz$ `cd frontend`
 
-vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/frontend$ `npm install`
+vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/frontend/namequiz$ `npm install`
 
 ### Starten:
 Zum starten der Anwendung kann folgender Befehl ausgeführt werden:
@@ -42,7 +42,7 @@ vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/backend$ `sudo docker-compos
 vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/backend$ `sudo docker-compose -f docker-compose.yaml up --scale game-service=5 --scale evaluation-service=5 --scale id-service=5 --scale user-service=5 --scale quizcontent-service=5`
 
 #### Frontend:
- vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/frontend$ `npm run dev`
+ vss@vss-VirtualBox:~/gocode/src/github.com/nameQuiz/frontend/namequiz$ `npm run dev`
  
  anschließend sollte das Frontend auf der Adresse: `localhost:3000` laufen.
  

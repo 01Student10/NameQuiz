@@ -149,19 +149,6 @@ services:
       - "8008:8008"
       - "8009:8009"
       - "8010:8010"
-  clientinitialize:
-    build:
-      context: .
-      dockerfile: client/clientinitialize/service/Dockerfile
-    environment:
-      - ALLOW_NONE_AUTHENTICATION=yes
-    command: --broker=nats --registry_address=etcd:2379 --broker_address=nats:4222
-    links:
-      - etcd
-      - nats
-    depends_on:
-      - etcd
-      - nats
   preload-content-service:
     build:
       context: .
